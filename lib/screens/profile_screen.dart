@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AuthScreen extends StatelessWidget {
-  const AuthScreen({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Auth"),
+        title: Text("Profile"),
       ),
     );
   }
