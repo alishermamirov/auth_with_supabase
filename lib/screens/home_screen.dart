@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       stream: Supabase.instance.client.auth.onAuthStateChange,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Scaffold(
+          return const Scaffold(
             body: Center(
               child: CircularProgressIndicator(),
             ),
@@ -20,9 +20,9 @@ class HomeScreen extends StatelessWidget {
         }
         final session = snapshot.hasData ? snapshot.data!.session : null;
         if (session != null) {
-          return ProfileScreen();
+          return const ProfileScreen();
         } else {
-          return AuthScreen();
+          return const AuthScreen();
         }
       },
     );
